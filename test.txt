@@ -1,0 +1,2 @@
+http://crystalbank.paydiant.com/
+http://Mobile.qa.paydiant.com/
