@@ -26,7 +26,3 @@
 * Fixing Issues
 
 Licensed under the GNU GPLv3, see LICENSE for more information.
-<<<<<<< HEAD
-
-=======
->>>>>>> 6e75c7c64b75194d55c0cfa5bb872362e7fd5e9f
