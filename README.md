@@ -4,7 +4,12 @@
 
 <hr>
  <h2 align="center">Multiple Weaknesses  Checking for Mass Subdomains</h2>
-
+<p align="center">
+<img src="files/sample2.PNG" alt="drawing" />
+</p>
+<p align="center">
+<img src="files/sample3.PNG" alt="drawing" />
+</p>
 <p align="center">
 <img src="files/sample.PNG" alt="drawing" />
 </p>
