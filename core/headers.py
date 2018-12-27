@@ -4,25 +4,43 @@
 from concurrent import futures
 from core.colors import *
 import requests
+import sys
 
 headList = []
 gsite = ""
 gpayload = ""
+progList = 0
+#Progress Bar
+def progress(count, total, status=''):
+    bar_len = 60
+    filled_len = int(round(bar_len * count / float(total)))
+
+    percents = round(100.0 * count / float(total), 1)
+    bar = '▓' * filled_len + '-' * (bar_len - filled_len)
+
+    sys.stdout.write('[%s] %s%s ...%s\r' % (bar, percents, '%', status))
+    #sys.stdout.flush()
+
 
 # Single Injection
 def InjectHead(headVar):
+
     global gpayload
     global gsite
+    global progList
+
     test = gsite
     hdr = {str(headVar).rstrip():str(gpayload)}
     try:
         response = requests.get(test, headers=hdr,timeout=3)
         res_headers = response.headers
+        progList += 1
         if str(headVar).rstrip() in response.headers:
             if response.headers[str(headVar).rstrip()] == gpayload :
-                print(Y+'['+R+'+'+Y+'] Target: '+str(test).rstrip()+' is '+R+'Vulnerable'+Y+' to Header Injection ['+R+str(headVar).rstrip()+G+']'+G)
+                print(Y+'['+R+'+'+Y+'] Target: '+str(test).rstrip()+' is '+R+'Vulnerable'+Y+' to Header Injection ['+R+str(headVar).rstrip()+Y+']'+G)
         else:
-            print(Y+'['+R+'+'+Y+'] Target: '+str(test).rstrip()+' is'+B+' not'+Y+' Vulnerable to Header Injection ['+R+str(headVar).rstrip()+G+']'+G)
+            progress(progList,1000,'Header Injection Progress')
+            #print(Y+'['+R+'+'+Y+'] Target: '+str(test).rstrip()+' is'+B+' not'+Y+' Vulnerable to Header Injection ['+R+str(headVar).rstrip()+Y+']'+G)
 
     except requests.Timeout as err:
         pass
