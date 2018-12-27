@@ -1,0 +1,4 @@
+Checking Live Hosts
+Checking DOM XSS
+Checking CORS Vulnerabilities
+Checking Header Injection
