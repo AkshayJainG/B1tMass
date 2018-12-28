@@ -3,8 +3,26 @@
 </p>
 
 <hr>
- <h2 align="center">Multiple Weaknesses  Checking for Mass Subdomains</h2>
+ <h3 align="center">Multiple Weaknesses  Checking for Mass Subdomains</h3>
+ 
+<p align="center">
+  <a href="https://github.com/Leoid/B1tMass/releases">
+    <img src="https://img.shields.io/github/release/Leoid/B1tMass/all.svg">
+  </a>
+  <a href="https://travis-ci.com/Leoid/B1tMass">
+    <img src="https://img.shields.io/travis/com/Leoid/B1tMass.svg">
+  </a>
+ <a href="https://github.com/Leoid/B1tMass/issues?q=is%3Aissue+is%3Aclosed">
+      <img src="https://img.shields.io/github/issues-closed-raw/Leoid/B1tMass.svg">
+  </a>
+</p>
 
+<p align="center">
+<img src="files/sample2.PNG" alt="drawing" />
+</p>
+<p align="center">
+<img src="files/sample3.PNG" alt="drawing" />
+</p>
 <p align="center">
 <img src="files/sample.PNG" alt="drawing" />
 </p>
