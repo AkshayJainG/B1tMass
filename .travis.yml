@@ -9,4 +9,4 @@ install:
 before_script:
     - echo "http://b1twis3.me/" > subdomains.txt
 script:
-  - python3 b1tmass.py subdomains.txt evil.com
+  - python3 b1tmass.py -f subdomains.txt -O evil.com -c
