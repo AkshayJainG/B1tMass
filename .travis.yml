@@ -5,7 +5,7 @@ os:
 python:
   - 3.6
 install:
-  - pip3.6 install -r requirements.txt
+  - pip3 install validators
 before_script:
     - Add subdomains to subdomains.txt or any txt file in each in a new line "http://example.com/"
 script:
