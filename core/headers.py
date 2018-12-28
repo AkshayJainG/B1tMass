@@ -3,8 +3,10 @@
 
 from concurrent import futures
 from core.colors import *
+from tqdm import tqdm
 import requests
 import sys
+
 
 headList = []
 gsite = ""
@@ -12,14 +14,14 @@ gpayload = ""
 progList = 0
 #Progress Bar
 def progress(count, total, status=''):
-    bar_len = 60
+    bar_len = 1
     filled_len = int(round(bar_len * count / float(total)))
 
     percents = round(100.0 * count / float(total), 1)
-    bar = '▓' * filled_len + '-' * (bar_len - filled_len)
+    bar = '=' * filled_len + '-' * (bar_len - filled_len)
 
     sys.stdout.write('[%s] %s%s ...%s\r' % (bar, percents, '%', status))
-    #sys.stdout.flush()
+    sys.stdout.flush()
 
 
 # Single Injection
