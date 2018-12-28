@@ -37,14 +37,14 @@
 ```python3 b1tmass.py [-h] [-f FILE] [-O ORIGIN] [-c] [-H] [-D] [-t THREADNUMBERS]```
 
 ### Optional Arguments:
-  -h, --help            show this help message and exit
-  -f FILE, --file FILE  Subdomains File Path
-  -O ORIGIN, --origin ORIGIN
+  * -h, --help            show this help message and exit
+  * -f FILE, --file FILE  Subdomains File Path
+  * -O ORIGIN, --origin ORIGIN
                         Origin Tag to be Injected
-  -c, --no-cors         Skip CORS Checking
-  -H, --no-headers      Skip Headers Injection Checking
-  -D, --no-dom          Skip DOM XSS Checking
-  -t THREADNUMBERS, --threads THREADNUMBERS
+  * -c, --no-cors         Skip CORS Checking
+  * -H, --no-headers      Skip Headers Injection Checking
+  * -D, --no-dom          Skip DOM XSS Checking
+  * -t THREADNUMBERS, --threads THREADNUMBERS
                         Number of Threads
 
 
