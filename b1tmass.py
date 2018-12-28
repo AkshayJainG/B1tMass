@@ -25,7 +25,7 @@ isUPList = []
 
 # Checking Arguments
 if len(sys.argv) < 2:
-    sys.exit(R+"[-] Check Arguments!"+G)
+    sys.exit(R+"[-] Check Arguments! Usage: python3 b1tmass.py subdomains.txt evil.com"+G)
 
 
 # Check Live Hosts
