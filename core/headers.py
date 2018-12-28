@@ -3,7 +3,6 @@
 
 from concurrent import futures
 from core.colors import *
-from tqdm import tqdm
 import requests
 import sys
 
