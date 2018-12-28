@@ -34,7 +34,20 @@
 * Checking Header Injection
 
 ## Usage
-```python3 b1tmass.py [subdomains text file] [attacker site for CORS test]```
+```python3 b1tmass.py [-h] [-f FILE] [-O ORIGIN] [-c] [-H] [-D] [-t THREADNUMBERS]
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -f FILE, --file FILE  Subdomains File Path
+  -O ORIGIN, --origin ORIGIN
+                        Origin Tag to be Injected
+  -c, --no-cors         Skip CORS Checking
+  -H, --no-headers      Skip Headers Injection Checking
+  -D, --no-dom          Skip DOM XSS Checking
+  -t THREADNUMBERS, --threads THREADNUMBERS
+                        Number of Threads
+
+```
 
 ## Contribution, Credits & License
 ### Ways to contribute
