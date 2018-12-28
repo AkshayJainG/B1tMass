@@ -34,9 +34,9 @@
 * Checking Header Injection
 
 ## Usage
-```python3 b1tmass.py [-h] [-f FILE] [-O ORIGIN] [-c] [-H] [-D] [-t THREADNUMBERS]
+```python3 b1tmass.py [-h] [-f FILE] [-O ORIGIN] [-c] [-H] [-D] [-t THREADNUMBERS]```
 
-optional arguments:
+### Optional Arguments:
   -h, --help            show this help message and exit
   -f FILE, --file FILE  Subdomains File Path
   -O ORIGIN, --origin ORIGIN
@@ -47,7 +47,7 @@ optional arguments:
   -t THREADNUMBERS, --threads THREADNUMBERS
                         Number of Threads
 
-```
+
 
 ## Contribution, Credits & License
 ### Ways to contribute
