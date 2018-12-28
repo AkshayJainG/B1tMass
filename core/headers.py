@@ -33,7 +33,7 @@ def InjectHead(headVar):
     test = gsite
     hdr = {str(headVar).rstrip():str(gpayload)}
     try:
-        response = requests.get(test, headers=hdr,timeout=3)
+        response = requests.get(test, headers=hdr,timeout=3,verify=False)
         res_headers = response.headers
         progList += 1
         if str(headVar).rstrip() in response.headers:

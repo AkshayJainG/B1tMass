@@ -8,7 +8,7 @@ import requests
 def CheckCORS(site,origin_site):
     hdr = {'Origin':'{0}'.format(origin_site)}
     try:
-        response = requests.get(site, headers=hdr,timeout=3)
+        response = requests.get(site, headers=hdr,timeout=3,verify=False)
         res_headers = response.headers
         if 'Access-Control-Allow-Origin' in response.headers:
             if response.headers['Access-Control-Allow-Origin'] == origin_site or response.headers['Access-Control-Allow-Origin'] == '*':

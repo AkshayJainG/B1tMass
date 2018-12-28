@@ -30,7 +30,7 @@ isUPList = []
 def IsUP(site):
     global args
     try:
-        req = requests.head(site,timeout=3)
+        req = requests.head(site,timeout=3,verify=False)
         if args.nocors:
             print(CheckCORS(site,origin_site))
         if args.nohead:
