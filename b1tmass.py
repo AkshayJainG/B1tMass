@@ -30,7 +30,7 @@ isUPList = []
 def IsUP(site):
     global args
     try:
-        req = requests.head(site,timeout=3,verify=False)
+        req = requests.head(site,timeout=3)
         if args.nocors:
             print(CheckCORS(site,origin_site))
         if args.nohead:
@@ -83,7 +83,17 @@ def Features():
 
 # Banner
 def welcome():
-    print("""%s
+    global args
+    m = args.mobile
+    if m:
+        print("""%s
+                    Mobile Mode
+                     #B1tMass
+                %s%s"""%(W,W,G))
+    if not m:
+        print("""%s
+
+
                 ██████╗  ██╗████████╗███╗   ███╗ █████╗ ███████╗███████╗
                 ██╔══██╗███║╚══██╔══╝████╗ ████║██╔══██╗██╔════╝██╔════╝
                 ██████╔╝╚██║   ██║   ██╔████╔██║███████║███████╗███████╗
@@ -93,8 +103,8 @@ def welcome():
 
 
                                                                      %s%s
-                          # Developed by Bitwis3
-                            # B1tMass Testing
+                            # Developed by Bitwis3
+                              # B1tMass Testing
     """ % (W, W, G))
 
 if __name__ == "__main__":

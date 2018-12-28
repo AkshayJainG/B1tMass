@@ -42,6 +42,7 @@
   * -O ORIGIN, --origin ORIGIN
                         Origin Tag to be Injected
   * -c, --no-cors         Skip CORS Checking
+  * -m, --mobile          Mobile Mode
   * -H, --no-headers      Skip Headers Injection Checking
   * -D, --no-dom          Skip DOM XSS Checking
   * -t THREADNUMBERS, --threads THREADNUMBERS

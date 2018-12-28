@@ -3,6 +3,7 @@
 
 from concurrent import futures
 from core.colors import *
+from core.usage import *
 import requests
 import sys
 
@@ -29,19 +30,24 @@ def InjectHead(headVar):
     global gpayload
     global gsite
     global progList
+    global args
 
-    test = gsite
+    m = args.mobile
+    test = str(gsite)
     hdr = {str(headVar).rstrip():str(gpayload)}
+
     try:
-        response = requests.get(test, headers=hdr,timeout=3,verify=False)
+        response = requests.get(str(test).rstrip(), headers=hdr,timeout=3)
         res_headers = response.headers
         progList += 1
         if str(headVar).rstrip() in response.headers:
             if response.headers[str(headVar).rstrip()] == gpayload :
                 print(Y+'['+R+'+'+Y+'] Target: '+str(test).rstrip()+' is '+R+'Vulnerable'+Y+' to Header Injection ['+R+str(headVar).rstrip()+Y+']'+G)
         else:
-            progress(progList,1000,'Header Injection Progress')
-            #print(Y+'['+R+'+'+Y+'] Target: '+str(test).rstrip()+' is'+B+' not'+Y+' Vulnerable to Header Injection ['+R+str(headVar).rstrip()+Y+']'+G)
+            if m == False:
+                progress(progList,1000,'Header Injection Progress')
+            if m == True:
+                print(Y+'['+R+'+'+Y+'] Target: '+str(test).rstrip()+' is'+B+' not'+Y+' Vulnerable to Header Injection ['+R+str(headVar).rstrip()+Y+']'+G)
 
     except requests.Timeout as err:
         pass
