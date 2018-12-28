@@ -67,7 +67,7 @@ def HeadInjection(site,payload):
     finally:
         f.close()
         if len(headList) > 0:
-            workers = min(50,len(headList))
+            workers = min(30,len(headList))
             with futures.ThreadPoolExecutor(workers) as executor:
                 res = executor.map(InjectHead,headList)
 
