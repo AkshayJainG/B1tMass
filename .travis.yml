@@ -1,0 +1,12 @@
+language: python
+cache: pip3
+os:
+  - linux
+python:
+  - 3.6
+install:
+  - pip install -r requirements.txt
+before_script:
+    - Add subdomains to subdomains.txt or any txt file in each in a new line "http://example.com/"
+script:
+  - python3 b1tmass.py subdomains.txt evil.com
