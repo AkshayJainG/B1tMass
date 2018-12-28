@@ -5,8 +5,7 @@ os:
 python:
   - 3.6
 install:
-  - pip3 install validators
-  - pip3 install requests
+  - pip3 install validators,requests
 before_script:
     - echo "http://b1twis3.me/" > subdomains.txt
 script:
