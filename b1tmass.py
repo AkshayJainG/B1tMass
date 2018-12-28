@@ -10,31 +10,33 @@ from core.cors import *
 from core.colors import *
 from core.headers import *
 from core.dom import *
+from core.usage import *
 
 import requests
 import validators
 import sys
 import os
 
-targets = str(sys.argv[1])
-origin_site = str(sys.argv[2])
-MAX_WORKERS = 10
+
+targets = str(args.file)
+origin_site = str(args.origin)
+MAX_WORKERS = int(args.threadnumbers)
 validSites = []
 isUPList = []
 
 
-# Checking Arguments
-if len(sys.argv) < 2:
-    sys.exit(R+"[-] Check Arguments! Usage: python3 b1tmass.py subdomains.txt evil.com"+G)
-
 
 # Check Live Hosts
 def IsUP(site):
+    global args
     try:
-        req = requests.get(site,timeout=3)
-        print(CheckCORS(site,origin_site))
-        HeadInjection(site,'WOOTWOOT')
-        DOMInjection(site)
+        req = requests.head(site,timeout=3)
+        if args.nocors:
+            print(CheckCORS(site,origin_site))
+        if args.nohead:
+            HeadInjection(site,'WOOTWOOT')
+        if args.nodom:
+            DOMInjection(site)
         isUPList.append(site)
     except Exception as e:
         pass
@@ -42,6 +44,7 @@ def IsUP(site):
 
 # Fetch Targets from the File
 def GetTargets():
+    global parser
     print(Y+'['+R+'*'+Y+'] Loading Targets.....'+G)
     target = None
     try:
@@ -54,7 +57,7 @@ def GetTargets():
           if check:
               validSites.append(str(site).rstrip())
     except:
-        pass
+        parser.print_help()
     finally:
         if target is not None:
             target.close()
