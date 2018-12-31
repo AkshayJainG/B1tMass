@@ -14,7 +14,7 @@ def InjectDom(domVar):
     test = gSit
     try:
         response = requests.get(test+str(domVar).rstrip(),timeout=3)
-        if str(domVar).rstrip() in response.text:
+        if str(domVar).rstrip().lower() in response.text.lower():
             print(Y+'['+R+'+'+Y+'] Target: '+str(test).rstrip()+' is '+R+'Vulnerable'+Y+' to DOM XSS  ['+R+str(domVar).rstrip()+G+']'+G)
         else:
             print(Y+'['+R+'+'+Y+'] Target: '+str(test).rstrip()+' is'+B+' not'+Y+' Vulnerable to DOM XSS ['+R+str(domVar).rstrip()+G+']'+G)
