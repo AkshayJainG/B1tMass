@@ -15,10 +15,6 @@
  <a href="https://github.com/Leoid/B1tMass/issues?q=is%3Aissue+is%3Aclosed">
       <img src="https://img.shields.io/github/issues-closed-raw/Leoid/B1tMass.svg">
       </a>
-      <a>
-      <a href="https://github.com/Leoid/B1tMass/releases">
-    <img src="https://img.shields.io/github/downloads/Leoid/B1tMass/total.svg">
-    </a>
       </a>
  <a href="https://www.gnu.org/licenses/gpl-3.0">
       <img src="https://img.shields.io/badge/License-GPL%20v3-blue.svg">
