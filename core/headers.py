@@ -54,7 +54,7 @@ def InjectHead(headVar):
 
 
 # Check Header Injection with a given Payload
-def HeadInjection(site,payload):
+def HeadInjection(site,payload,worker_threads):
     global gsite,gpayload
     gsite = site
     gpayload = payload
@@ -67,7 +67,7 @@ def HeadInjection(site,payload):
     finally:
         f.close()
         if len(headList) > 0:
-            workers = min(30,len(headList))
+            workers = min(int(worker_threads),len(headList))
             with futures.ThreadPoolExecutor(workers) as executor:
                 res = executor.map(InjectHead,headList)
 

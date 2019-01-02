@@ -34,7 +34,7 @@ def IsUP(site):
         if args.nocors:
             print(CheckCORS(site,origin_site))
         if args.nohead:
-            HeadInjection(site,'WOOTWOOT')
+            HeadInjection(site,'WOOTWOOT',MAX_WORKERS)
         if args.nodom:
             DOMInjection(site)
         isUPList.append(site)

@@ -9,8 +9,7 @@ parser.add_argument('-c', '--no-cors',action="store_true",default=False, help='S
 parser.add_argument('-m', '--mobile',action="store_true",default=False, help='Mobile Mode', dest='mobile')
 parser.add_argument('-H', '--no-headers', action="store_true",default=False,help='Skip Headers Injection Checking', dest='nohead')
 parser.add_argument('-D', '--no-dom', action="store_true",default=False,help='Skip DOM XSS Checking', dest='nodom')
-parser.add_argument('-t', '--threads', help='Number of Threads',
-                    dest='threadnumbers', type=int, default=10)
+parser.add_argument('-t', '--threads', help='Number of Threads',dest='threadnumbers', type=int, default=10)
 args = parser.parse_args()
 
 
