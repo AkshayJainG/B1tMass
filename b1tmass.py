@@ -11,6 +11,7 @@ from core.colors import *
 from core.headers import *
 from core.dom import *
 from core.usage import *
+from core.fuzz import *
 
 import requests
 import validators
@@ -37,6 +38,8 @@ def IsUP(site):
             HeadInjection(site,'WOOTWOOT',MAX_WORKERS)
         if args.nodom:
             DOMInjection(site)
+        if args.fuzz:
+            FuzzEx(site)
         isUPList.append(site)
     except Exception as e:
         pass
