@@ -45,10 +45,11 @@
   * -f FILE, --file FILE  Subdomains File Path
   * -O ORIGIN, --origin ORIGIN
                         Origin Tag to be Injected
-  * -c, --no-cors         Skip CORS Checking
+  * -c, --cors            CORS Checking
   * -m, --mobile          Mobile Mode
-  * -H, --no-headers      Skip Headers Injection Checking
-  * -D, --no-dom          Skip DOM XSS Checking
+  * -z, --fuzz            Searching for File/s in all subdomains
+  * -H, --headers         Headers Injection Checking
+  * -D, --dom             DOM XSS Checking
   * -t THREADNUMBERS, --threads THREADNUMBERS
                         Number of Threads
 
